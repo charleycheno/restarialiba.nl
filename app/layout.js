@@ -1,4 +1,5 @@
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Restaria Liba",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="nl">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
