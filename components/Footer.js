@@ -17,10 +17,10 @@ export default function Footer() {
          </div>
          <div className="flex flex-col items-start gap-1">
             <h2 className="mb-4 text-xl font-semibold">Volg ons ook op</h2>
-            <Link href="https://facebook.com" target="_blank" className="hover:underline">Facebook</Link>
-            <Link href="https://instagram.com/restaria_liba" target="_blank" className="hover:underline">Instagram</Link>
-            <Link href="https://snapchat.com" target="_blank" className="hover:underline">Snapchat</Link>
             <Link href="https://maps.app.goo.gl/m35GrQRpqGi4EXeaA" target="_blank" className="hover:underline">Google Maps</Link>
+            <Link href="https://facebook.com/RestariaLiba" target="_blank" className="hover:underline">Facebook</Link>
+            <Link href="https://instagram.com/restaria_liba" target="_blank" className="hover:underline">Instagram</Link>
+            <Link href="https://t.snapchat.com/oUB5XVid" target="_blank" className="hover:underline">Snapchat</Link>
          </div>
          <div className="flex flex-col items-start gap-1">
             <h2 className="mb-4 text-xl font-semibold">Neem contact op</h2>
