@@ -1,74 +1,65 @@
 "use client"
 
 import Logo from "@/public/logo.png";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image"
 import Link from "next/link"
 
 const NavBar = () => {
-  const [ hamburgerMenu, setHambugerMenu ] = useState(false);
+  const [ menu, setMenu ] = useState(false);
+  const menuShadow = useRef()
+  const menuList = useRef()
 
-  const handleHamburgerMenu = () => {
-    setHambugerMenu(!hamburgerMenu)
+  const handleMenu = () => {
+    setMenu(!menu)
   }
 
   useEffect(() => {
-    if(hamburgerMenu === true) {
-      document.getElementById("hamburger-menu-links").classList.remove("hidden");
-      document.getElementById("hamburger-menu-shadow").classList.remove("hidden");
-      document.body.style.height = "100vh";
-      document.body.style.overflowY = "clip";
-      window.scrollTo(0, 0);
-    } else if(hamburgerMenu === false) {
-      document.getElementById("hamburger-menu-links").classList.add("hidden");
-      document.getElementById("hamburger-menu-shadow").classList.add("hidden");
-      document.body.style.height = "auto";
-      document.body.style.overflowY = "auto";
+    if(window.innerWidth < 800) {
+      if(menu == true) {
+        menuList.current.classList.remove("hidden");
+        menuList.current.classList.add("flex");
+        menuShadow.current.classList.remove("hidden");
+        document.body.style.height = "100vh";
+        document.body.style.overflowY = "clip";
+        window.scrollTo(0, 0);
+      } else if(menu == false) {
+        menuList.current.classList.add("hidden");
+        menuList.current.classList.remove("flex");
+        menuShadow.current.classList.add("hidden");
+        document.body.style.height = "auto";
+        document.body.style.overflowY = "auto";
+      }
     }
-  }, [hamburgerMenu])
+  }, [menu])
 
   return (
-    <div className="relative">
-      <div className="z-40 w-full bg-zinc-800 lg:bg-transparent lg:bg-opacity-75 lg:absolute">
-        <nav className="flex items-center justify-between max-w-full-lg p-4 mx-auto md:flex-col lg:flex-row">
-          <div className="flex items-center justify-between w-full mx-2 md:w-auto md:gap-x-10">
-            <Link href="/" className="flex gap-4 items-center">
-              <Image src={Logo} alt="" className="w-14 md:w-16 mr-1 md:mr-3" />
-              <h1 className="py-2 text-3xl font-bold text-white hidden md:inline">Restaria Liba</h1>
-            </Link>
-            <Link className="hidden py-2 mx-2 text-white bg-green-700 rounded px-14 hover:bg-green-800 md:inline lg:hidden" href="/bestellen">Bestellen</Link>
-            <svg className="h-10 hover:cursor-pointer md:hidden" onClick={handleHamburgerMenu} viewBox="0 0 24 24" fill="none">
-              <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-              <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-              <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+    <nav className="z-10 w-full bg-zinc-800 text-white lg:bg-transparent lg:absolute">
+      <div className="container flex items-center mx-auto px-6 py-4 md:px-10 md:flex-col md:gap-2 lg:flex-row lg:gap-0">
+        <Link className="flex items-center gap-6" href="/">
+          <Image src={Logo} alt="" className="w-16" />
+          <div className="text-3xl font-bold">
+            <span className="hidden md:inline">Restaria</span>
+            <span className="hidden md:inline"> </span>
+            <span>Liba</span>
           </div>
-          <div className="z-50 md:hidden">
-            <div className="absolute top-0 left-0 w-full h-screen bg-black opacity-75" id="hamburger-menu-shadow" onClick={handleHamburgerMenu}></div>
-            <div className="absolute top-0 right-0 w-56 h-screen bg-zinc-900" id="hamburger-menu-links">
-              <div className="flex flex-col text-center text-white">
-                <Link className="py-4 border-b-2 px-auto border-b-zinc-700" href="/" onClick={handleHamburgerMenu}>Home</Link>
-                <Link className="py-4 border-b-2 px-auto border-b-zinc-700" href="/restaria" onClick={handleHamburgerMenu}>Restaria</Link>
-                <Link className="py-4 border-b-2 px-auto border-b-zinc-700" href="/cafe" onClick={handleHamburgerMenu}>Café</Link>
-                <Link className="py-4 border-b-2 px-auto border-b-zinc-700" href="/over-ons" onClick={handleHamburgerMenu}>Over Ons</Link>
-                <Link className="py-4 px-auto" href="/contact" onClick={handleHamburgerMenu}>Contact</Link>
-                <Link className="py-4 bg-green-700 px-auto" href="/bestellen" onClick={handleHamburgerMenu}>Bestellen</Link>
-              </div>
-            </div>
-          </div>
-          <div className="hidden w-auto h-auto bg-transparent md:inline">
-            <div className="flex items-center text-white ">
-              <Link className="px-3 py-2 mx-2 border-none border-b-zinc-700" href="/">Home</Link>
-              <Link className="px-3 py-2 mx-2 border-none border-b-zinc-700" href="/restaria">Restaria</Link>
-              <Link className="px-3 py-2 mx-2 border-none border-b-zinc-700" href="/cafe">Café</Link>
-              <Link className="px-3 py-2 mx-2 border-none border-b-zinc-700" href="/over-ons">Over Ons</Link>
-              <Link className="px-3 py-2 mx-2 border-none border-b-zinc-700" href="/contact">Contact</Link>
-              <Link className="px-3 py-2 mx-2 bg-green-700 rounded hover:bg-green-800 md:hidden lg:inline" href="/bestellen">Bestellen</Link>
-            </div>
-          </div>
-        </nav>
+        </Link>
+        <svg className="h-10 ml-auto hover:cursor-pointer md:hidden" onClick={handleMenu} viewBox="0 0 24 24" fill="none">
+          <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div className="hidden z-20 absolute md:flex flex-col w-56 h-screen top-0 right-0 text-center bg-zinc-900 md:bg-transparent text-white ml-auto md:static md:flex-row md:w-max md:h-auto md:mx-auto lg:mx-0 lg:ml-auto" ref={menuList}>
+          <Link className="py-4 border-b-2 px-auto border-b-zinc-700 md:border-none md:px-3 md:py-2 md:mx-2" onClick={handleMenu} href="/">Home</Link>
+          <Link className="py-4 border-b-2 px-auto border-b-zinc-700 md:border-none md:px-3 md:py-2 md:mx-2" onClick={handleMenu} href="/restaria">Restaria</Link>
+          <Link className="py-4 border-b-2 px-auto border-b-zinc-700 md:border-none md:px-3 md:py-2 md:mx-2" onClick={handleMenu} href="/cafe">Café</Link>
+          <Link className="py-4 border-b-2 px-auto border-b-zinc-700 md:border-none md:px-3 md:py-2 md:mx-2" onClick={handleMenu} href="/over-ons">Over Ons</Link>
+          <Link className="py-4 px-auto md:px-3 md:py-2 md:mx-2" onClick={handleMenu} href="/contact">Contact</Link>
+          <Link className="py-4 bg-green-700 rounded md:px-3 md:py-2 md:mx-2 md:hidden lg:inline" onClick={handleMenu} href="/bestellen">Bestellen</Link>
+        </div>
+        <div className="hidden md:hidden z-10 absolute top-0 left-0 w-full h-screen bg-black opacity-75" onClick={handleMenu} ref={menuShadow}></div>
       </div>
-    </div>
+    </nav>
   );
 }
  
