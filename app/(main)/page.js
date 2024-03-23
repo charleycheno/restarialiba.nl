@@ -1,11 +1,12 @@
 export default async function Home() {
   return (
-    <div className="text-center py-10">
+    <div className="text-center py-10 px-4">
       <h1 className="text-3xl font-bold">Restaria Liba</h1>
-      <h2 className="text-lg font-bold">Boven-Hardinxveld</h2>
+      <h2 className="text-xl font-bold">Boven-Hardinxveld</h2>
       <br />
-      <p>Deze website is momenteel in onderhoud.</p>
-      <p>Gemaakt door <a href="https://instagram.com/charleychen18" className="underline text-blue-800">Charley</a></p>
+      <p className="text-xl italic">Deze website is momenteel in onderhoud</p>
+      <br />
+      <p>Website gemaakt door <a href="https://instagram.com/charleychen18" className="underline text-blue-800">Charley</a></p>
     </div>
   );
 }

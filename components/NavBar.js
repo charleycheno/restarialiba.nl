@@ -74,7 +74,7 @@ const NavBar = () => {
       <div className="container flex items-center mx-auto px-6 py-4 md:px-10 md:flex-col md:gap-2 lg:flex-row lg:gap-0">
         <Link className="flex items-center gap-6" href="/">
           <Image src={Logo} alt="" className="w-16" />
-          <span className="text-3xl font-bold">Restaria Liba</span>
+          <span className="hidden text-3xl font-bold md:inline">Restaria Liba</span>
         </Link>
         <svg className="h-10 ml-auto hover:cursor-pointer md:hidden" onClick={handleMenu} viewBox="0 0 24 24" fill="none">
           <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
