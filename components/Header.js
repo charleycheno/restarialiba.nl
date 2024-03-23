@@ -4,7 +4,12 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Home from "@/public/home.jpg";
+import Home from "@/public/banners/home.jpg";
+import Restaria from "@/public/banners/restaria.jpg";
+import Menu from "@/public/banners/menu.jpg";
+import Cafe from "@/public/banners/cafe.jpg";
+import OverOns from "@/public/banners/over-ons.jpg";
+import Contact from "@/public/banners/contact.jpg";
 
 export default function Header() {
    if(usePathname() == "/") {
@@ -26,14 +31,44 @@ export default function Header() {
          </>
       )
    } else {
+      var pageTitle
+      var pageBanner
+      switch (usePathname()) {
+         case "/restaria":
+            pageTitle = "Restaria"
+            pageBanner = Restaria
+            break;
+         case "/restaria/menu":
+            pageTitle = "Menu"
+            pageBanner = Menu
+            break;
+         case "/cafe":
+            pageTitle = "Café"
+            pageBanner = Cafe
+            break;
+         case "/over-ons":
+            pageTitle = "Over Ons"
+            pageBanner = OverOns
+            break;
+         case "/contact":
+            pageTitle = "Contact"
+            pageBanner = Contact
+            break;
+      
+         default:
+            pageTitle = ""
+            break;
+      }
       return (
          <>
             <NavBar />
             <div className="relative w-full h-64 lg:h-100">
-               <Image src={Home} alt="" className="absolute object-cover w-full h-full" />
+               <Image src={pageBanner} alt="" className="absolute object-cover w-full h-full" priority />
                <div className="absolute w-full h-full bg-gradient-to-b from-black/80 via-black/70 via-75% to-black/40 lg:from-black/90 lg:via-black/70 lg:via-50% lg:to-black/40" />
                <div className="absolute w-full h-full px-2 flex flex-col items-center justify-center text-center text-5xl font-bold text-white uppercase">
-                  <h1>{usePathname().replace("-", " ").slice(1)}</h1>
+                  <h1>
+                     {pageTitle}
+                  </h1>
                </div>
             </div>
          </>
