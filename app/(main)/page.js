@@ -1,4 +1,9 @@
-export default async function Home() {
+export const metadata = {
+  title: "Restaria Liba",
+  description: "Het plekje van Boven-Hardinxveld!",
+}
+
+export default async function Page() {
   return (
     <div className="text-center py-10 px-4">
       <h1 className="text-3xl font-bold">Restaria Liba</h1>
