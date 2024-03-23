@@ -63,7 +63,7 @@ export default function Header() {
          <>
             <NavBar />
             <div className="relative w-full h-64 lg:h-100">
-               <Image src={pageBanner} alt="" className="absolute object-cover w-full h-full" priority />
+               <Image src={pageBanner} alt="Banner" className="absolute object-cover w-full h-full" priority />
                <div className="absolute w-full h-full bg-gradient-to-b from-black/80 via-black/70 via-75% to-black/40 lg:from-black/90 lg:via-black/70 lg:via-50% lg:to-black/40" />
                <div className="absolute w-full h-full px-2 flex flex-col items-center justify-center text-center text-5xl font-bold text-white uppercase">
                   <h1>{pageTitle}</h1>

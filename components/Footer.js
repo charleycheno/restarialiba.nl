@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
          </div>
          <Link href="/" className="flex items-center justify-center">
-            <Image src={Logo} className="w-40" />
+            <Image src={Logo} alt="Logo" className="w-40" />
          </Link>
       </div>
    </footer>
