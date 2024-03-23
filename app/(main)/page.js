@@ -1,5 +1,4 @@
 export const metadata = {
-  title: "Restaria Liba",
   description: "Het plekje van Boven-Hardinxveld!",
 }
 

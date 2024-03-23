@@ -5,5 +5,6 @@ export default function robots() {
          allow: '/',
          disallow: '/admin/',
       },
+      sitemap: 'https://restarialiba.nl/sitemap.xml',
    }
 }
