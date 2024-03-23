@@ -1,37 +1,37 @@
 export default function sitemap() {
    return [
       {
-         url: 'https://restarialiba.nl',
+         url: 'https://ljhc.nl',
          lastModified: new Date(),
          priority: 1,
       },
       {
-         url: 'https://restarialiba.nl/restaria',
+         url: 'https://ljhc.nl/restaria',
          lastModified: new Date(),
          priority: 0.8,
       },
       {
-         url: 'https://restarialiba.nl/restaria/menu',
+         url: 'https://ljhc.nl/restaria/menu',
          lastModified: new Date(),
          priority: 0.8,
       },
       {
-         url: 'https://restarialiba.nl/cafe',
+         url: 'https://ljhc.nl/cafe',
          lastModified: new Date(),
          priority: 0.8,
       },
       {
-         url: 'https://restarialiba.nl/over-ons',
+         url: 'https://ljhc.nl/over-ons',
          lastModified: new Date(),
          priority: 0.8,
       },
       {
-         url: 'https://restarialiba.nl/contact',
+         url: 'https://ljhc.nl/contact',
          lastModified: new Date(),
          priority: 0.8,
       },
       {
-         url: 'https://restarialiba.nl/bestellen',
+         url: 'https://ljhc.nl/bestellen',
          lastModified: new Date(),
          priority: 0.9,
       },

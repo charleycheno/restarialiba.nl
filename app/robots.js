@@ -5,6 +5,6 @@ export default function robots() {
          allow: '/',
          disallow: '/admin/',
       },
-      sitemap: 'https://restarialiba.nl/sitemap.xml',
+      sitemap: 'https://ljhc.nl/sitemap.xml',
    }
 }
