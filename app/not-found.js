@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center p-2 mt-10 lg:m-0 lg:justify-center lg:h-screen">
+    <div className="flex flex-col items-center justify-center p-2 h-dvh">
       <h1 className="text-5xl font-bold">404</h1>
       <h2 className="text-3xl text-center font-bold my-10">Deze pagina kan niet worden gevonden</h2>
       <p className="text-lg mb-4">Navigeer snel naar</p>
