@@ -1,6 +1,6 @@
 "use client"
 
-import Logo from "@/public/logo.png";
+import Logo from "@/public/icons/logo.png";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image"
 import Link from "next/link"
