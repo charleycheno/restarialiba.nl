@@ -1,7 +1,13 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Head from "next/head";
+
+export const metadata = {
+  title: {
+    template: "%s | Restaria Liba",
+    default: "Restaria Liba",
+  },
+}
 
 export default function RootLayout({ children }) {
   return (

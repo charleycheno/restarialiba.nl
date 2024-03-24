@@ -77,9 +77,9 @@ const NavBar = () => {
           <span className="hidden text-3xl font-bold md:inline">Restaria Liba</span>
         </Link>
         <svg className="h-10 ml-auto hover:cursor-pointer md:hidden" onClick={handleMenu} viewBox="0 0 24 24" fill="none">
-          <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-          <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-          <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M4 18L20 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M4 12L20 12" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M4 6L20 6" stroke="#ffffff" strokeWidth="2" strokeLinecap="round"/>
         </svg>
         <div className="hidden z-20 absolute md:flex flex-col w-56 h-screen top-0 right-0 text-center bg-zinc-900 md:bg-transparent text-white ml-auto md:static md:flex-row md:w-max md:h-auto md:mx-auto lg:mx-0 lg:ml-auto" ref={menuList}>
           <Link className="py-4 border-b-2 px-auto border-b-zinc-700 md:cursor-pointer md:bg-transparent md:border-none md:px-3 md:py-2 md:mx-2" href="/">Home</Link>
