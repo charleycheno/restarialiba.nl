@@ -1,5 +1,5 @@
-import OrderAppNav from "@/components/OrderAppNav"
-import Link from "next/link"
+import Header from "@/components/Bestellen/Header";
+import NavBar from "@/components/Bestellen/NavBar"
 
 export const metadata = {
   title: {
@@ -9,13 +9,18 @@ export const metadata = {
   description: "Bestel online eten bij Restaria Liba!",
 }
 
+export const viewport = {
+  viewportFit: 'cover',
+}
+
 export default function Layout({ children }) {
   return (
     <div className="flex flex-col h-dvh w-full">
-      <main className="flex-1">
+      <Header />
+      <main className="flex-grow">
         {children}
       </main>
-      <OrderAppNav />
+      <NavBar />
     </div>
   )
 }
