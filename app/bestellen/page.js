@@ -14,12 +14,19 @@ export default function Page() {
         </div>
       </div>
       <div>
-      <h2 className="mb-2 text-xl font-medium">Eten</h2>
+        <h2 className="mb-2 text-xl font-medium">Eten</h2>
         <div className="grid grid-cols-2 gap-4">
           <div className="h-24 border-4 rounded-xl"></div>
           <div className="h-24 border-4 rounded-xl"></div>
           <div className="h-24 border-4 rounded-xl"></div>
           <div className="h-24 border-4 rounded-xl"></div>
+          <div className="h-24 border-4 rounded-xl"></div>
+          <div className="h-24 border-4 rounded-xl"></div>
+        </div>
+      </div>
+      <div>
+        <h2 className="mb-2 text-xl font-medium">Diversen</h2>
+        <div className="grid grid-cols-2 gap-4">
           <div className="h-24 border-4 rounded-xl"></div>
           <div className="h-24 border-4 rounded-xl"></div>
         </div>
