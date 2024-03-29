@@ -15,7 +15,7 @@ export const viewport = {
 
 export default function Layout({ children }) {
   return (
-    <div className="flex flex-col h-dvh w-full">
+    <div className="flex flex-col min-h-dvh w-full overflow-x-clip">
       <Header />
       <main className="flex-grow">
         {children}
