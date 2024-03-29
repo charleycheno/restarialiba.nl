@@ -13,7 +13,7 @@ export default function Page({ params }) {
     <div className="flex flex-col">
       {
         items.map((item) => {
-          return <AddCard name={"Product uit categorie: " + params.categorie} price="€100,00" />
+          return <AddCard name={"Product uit categorie: " + params.categorie} id="1" price="€100,00" />
         })
       }
     </div>

@@ -42,7 +42,7 @@ export default function Page() {
       <div>
         <h2 className="mb-2 text-xl font-medium">Diversen</h2>
         <div className="grid grid-cols-2 gap-2">
-          <Link href="/bestellen/zoeken" className="h-24 border-4 rounded-xl">Zoeken</Link>
+          <Link href="/bestellen/overig" className="h-24 border-4 rounded-xl">Overig</Link>
           <Link href="/bestellen/cadeaukaarten" className="h-24 border-4 rounded-xl">Cadeaukaarten</Link>
           <Link href="/bestellen/producten" className="h-32 border-4 rounded-xl col-span-2">Alle producten</Link>
         </div>
