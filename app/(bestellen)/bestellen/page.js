@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Page() {
   return (
     <div className="container flex flex-col gap-4 mx-auto p-4">
@@ -35,7 +37,7 @@ export default function Page() {
         <div className="grid grid-cols-2 gap-2">
           <div className="h-24 border-4 rounded-xl"></div>
           <div className="h-24 border-4 rounded-xl"></div>
-          <div className="h-32 border-4 rounded-xl col-span-2"></div>
+          <Link href="/bestellen/alle-producten" className="h-32 border-4 rounded-xl col-span-2">Alle producten</Link>
         </div>
       </div>
     </div>

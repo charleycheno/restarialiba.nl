@@ -1,5 +1,5 @@
 export default function Page() {
   return (
-    <div>Favorieten</div>
+    <div>Alle producten</div>
   )
 }

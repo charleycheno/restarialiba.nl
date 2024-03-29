@@ -1,6 +1,6 @@
 "use client"
 
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/Main/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
