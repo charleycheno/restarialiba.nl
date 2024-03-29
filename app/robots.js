@@ -3,6 +3,8 @@ export default function robots() {
       rules: {
          userAgent: '*',
          allow: '/',
+         disallow: '/winkelwagen/',
+         disallow: '/account/',
          disallow: '/admin/',
       },
       sitemap: 'https://ljhc.nl/sitemap.xml',
