@@ -1,5 +1,3 @@
-"use client"
-
 import AddCard from "@/components/Bestellen/AddCard"
 
 export default function Page() {
@@ -13,7 +11,7 @@ export default function Page() {
     <div className="flex flex-col">
       {
         items.map((item) => {
-          return <AddCard name="Frikandel" price="€2,50" />
+          return <AddCard name="Frikandel" id="1" price="€2,50" />
         })
       }
     </div>

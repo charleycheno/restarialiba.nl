@@ -1,7 +1,9 @@
+import Link from "next/link"
+
 export default function AddCard(props) {
   return (
     <div className="flex items-center w-full border-y border-zinc-100 p-2">
-      <div className="h-12 w-12 rounded-full border-2"></div>
+      <Link href={"/bestellen/producten/" + props.id} className="h-12 w-12 rounded-full border-2"></Link>
       <div className="px-2">
         <h2>{props.name}</h2>
         <span>💶 {props.price}</span>
