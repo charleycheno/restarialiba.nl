@@ -1,4 +1,4 @@
-import Header from "@/components/Bestellen/Header";
+import Header from "@/components/Bestellen/Header"
 import NavBar from "@/components/Bestellen/NavBar"
 
 export const metadata = {
@@ -7,10 +7,6 @@ export const metadata = {
     default: "Online Bestellen",
   },
   description: "Bestel online eten bij Restaria Liba!",
-}
-
-export const viewport = {
-  viewportFit: 'cover',
 }
 
 export default function Layout({ children }) {
