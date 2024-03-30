@@ -1,5 +1,5 @@
-import Header from "@/components/Bestellen/Header"
-import NavBar from "@/components/Bestellen/NavBar"
+import Header from "@/app/_components/Bestellen/Header"
+import NavBar from "@/app/_components/Bestellen/NavBar"
 
 export const metadata = {
   title: {

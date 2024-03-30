@@ -7,6 +7,10 @@ async function main() {
    await mongoose.connect(process.env.MONGODB_URI + "/restarialiba")
 }
 
+async function getProducts() {
+   return Product.find()
+}
+
 async function createProduct(data) {
    await Product.create(data)
 }
@@ -16,6 +20,7 @@ async function deleteProduct(data) {
 }
 
 module.exports = {
+   getProducts,
    createProduct,
    deleteProduct
 }

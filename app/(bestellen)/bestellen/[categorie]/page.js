@@ -1,6 +1,6 @@
 "use client"
 
-import AddCard from "@/components/Bestellen/AddCard"
+import AddCard from "@/app/_components/Bestellen/AddCard"
 
 export default function Page({ params }) {
   var items = []
