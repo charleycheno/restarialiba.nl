@@ -8,11 +8,11 @@ async function main() {
 }
 
 async function createProduct(data) {
-   new Product.create(data)
+   await Product.create(data)
 }
 
 async function deleteProduct(data) {
-   new Product.findByIdAndDelete(data)
+   await Product.findByIdAndDelete(data)
 }
 
 module.exports = {
