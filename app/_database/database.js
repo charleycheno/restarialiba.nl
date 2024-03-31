@@ -8,19 +8,24 @@ async function main() {
 }
 
 async function getProducts() {
-   return Product.find()
+   return Product.find().sort({ name: 1 })
+}
+
+async function getProductsFromCategory(data) {
+   return Product.find({ category: { $eq: data } })
 }
 
 async function createProduct(data) {
-   await Product.create(data)
+   return Product.create(data)
 }
 
 async function deleteProduct(data) {
-   await Product.findByIdAndDelete(data)
+   return Product.findByIdAndDelete(data)
 }
 
 module.exports = {
    getProducts,
+   getProductsFromCategory,
    createProduct,
    deleteProduct
 }

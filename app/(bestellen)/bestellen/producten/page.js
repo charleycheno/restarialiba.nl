@@ -1,17 +1,20 @@
 import AddCard from "@/app/_components/Bestellen/AddCard"
 
-export default function Page() {
-  var items = []
-
-  for(let i = 1; i <= 100; i++) {
-    items.push(i)
-  }
+export default async function Page() {
+  const request = await fetch(`${process.env.API_ENDPOINT}/get-products`)
+  const data = await request.json()
+  const products = data.products
   
   return (
     <div className="flex flex-col">
       {
-        items.map((item) => {
-          return <AddCard name="Frikandel" id="1" price="€2,50" />
+        products.map((product) => {
+          var prices = []
+          for (let i = 0; i < product.versions.length; i++) {
+            const version = product.versions[i];
+            prices.push(version.price)
+          }
+          return <AddCard name={product.name} key={product._id} prices={prices} />
         })
       }
     </div>
