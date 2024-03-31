@@ -7,7 +7,7 @@ export default async function Page({ params }) {
       category: params.categorie
     }),
     "content-type": "application/json",
-    cache: 'no-store'
+    cache: "no-store"
   })
   const data = await request.json()
   const products = data.products

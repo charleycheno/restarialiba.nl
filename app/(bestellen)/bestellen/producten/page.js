@@ -2,7 +2,8 @@ import AddCard from "@/app/_components/Bestellen/AddCard"
 
 export default async function Page() {
   const request = await fetch(`${process.env.API_ENDPOINT}/get-products`, {
-    cache: 'no-store'
+    method: "POST",
+    cache: "no-store"
   })
   const data = await request.json()
   const products = data.products
