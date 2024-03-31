@@ -1,5 +1,5 @@
 export default function Page() {
   return (
-    <div>Admin</div>
+    <div>{process.env.TEST}</div>
   )
 }
