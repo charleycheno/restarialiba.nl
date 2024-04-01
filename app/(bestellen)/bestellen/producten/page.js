@@ -17,7 +17,7 @@ export default async function Page() {
             const version = product.versions[i];
             prices.push(version.price)
           }
-          return <AddCard name={product.name} key={product._id} prices={prices} />
+          return <AddCard key={product.id} name={product.name} id={product.id} prices={prices} />
         })
       }
     </div>
