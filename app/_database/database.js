@@ -11,20 +11,23 @@ async function getProducts() {
    return Product.find().sort({ name: 1 })
 }
 
-async function getProductsFromCategory(data) {
-   return Product.find({ category: { $eq: data } })
+async function getProductsFromCategory(category) {
+   return Product.find({ category: { $eq: category } })
 }
 
-async function createProduct(data) {
-   return Product.create(data)
+async function createProduct(document) {
+   return Product.create(document)
 }
 
-async function updateProduct(data, update) {
-   return Product.findByIdAndUpdate(data, update)
+async function updateProduct(id, update) {
+   return Product.findByIdAndUpdate(id, update, {
+      new: true,
+      runValidators: true
+   })
 }
 
-async function deleteProduct(data) {
-   return Product.findByIdAndDelete(data)
+async function deleteProduct(id) {
+   return Product.findByIdAndDelete(id)
 }
 
 module.exports = {
