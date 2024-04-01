@@ -20,14 +20,14 @@ async function createProduct(document) {
 }
 
 async function updateProduct(id, update) {
-   return Product.findByIdAndUpdate(id, update, {
+   return Product.findOneAndUpdate({id: id}, update, {
       new: true,
       runValidators: true
    })
 }
 
 async function deleteProduct(id) {
-   return Product.findByIdAndDelete(id)
+   return Product.deleteOne({ id: id })
 }
 
 module.exports = {

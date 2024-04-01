@@ -9,11 +9,9 @@ const productSchema = new mongoose.Schema({
       unique: true,
       index: true,
       validate: {
-         validator: function(v) {
-           return !/\s/.test(v);
-         },
-         message: props => `The ID ${props.value} contains spaces. IDs should not contain spaces.`
-       }
+         validator: v => !/\s/.test(v)
+      },
+      message: props => `The ID ${props.value} contains spaces. IDs should not contain spaces.`
    },
    name: {
       type: String,
