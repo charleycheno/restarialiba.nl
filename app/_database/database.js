@@ -19,6 +19,10 @@ async function createProduct(data) {
    return Product.create(data)
 }
 
+async function updateProduct(data, update) {
+   return Product.findByIdAndUpdate(data, update)
+}
+
 async function deleteProduct(data) {
    return Product.findByIdAndDelete(data)
 }
@@ -27,5 +31,6 @@ module.exports = {
    getProducts,
    getProductsFromCategory,
    createProduct,
+   updateProduct,
    deleteProduct
 }

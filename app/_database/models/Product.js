@@ -7,7 +7,13 @@ const productSchema = new mongoose.Schema({
       trim: true,
       required: true,
       unique: true,
-      index: true
+      index: true,
+      validate: {
+         validator: function(v) {
+           return !/\s/.test(v);
+         },
+         message: props => `The ID ${props.value} contains spaces. IDs should not contain spaces.`
+       }
    },
    name: {
       type: String,
