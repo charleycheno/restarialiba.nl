@@ -12,7 +12,7 @@ async function getProducts() {
 }
 
 async function getProductsFromCategory(category) {
-   return Product.find({ category: { $eq: category } })
+   return Product.find({ category: { $eq: category } }).sort({ name: 1 })
 }
 
 async function createProduct(document) {
