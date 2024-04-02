@@ -28,7 +28,7 @@ export default function VersionList(props) {
                   versions.map((version) => {
                      return (
                         <button key={versions.indexOf(version)} className={"flex flex-col items-center justify-center flex-grow border-2 rounded-lg p-4" + (selectedVersion == versions.indexOf(version) ? " bg-zinc-200" : "")} onClick={() => selectVersion(versions.indexOf(version))}>
-                           <span className="capitalize font-bold">{version.name}</span>
+                           <span className="font-bold">{version.name}</span>
                            <span>€{version.price.toLocaleString('nl-NL', {minimumFractionDigits: 2})}</span>
                         </button>
                      )
