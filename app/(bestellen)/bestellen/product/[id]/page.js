@@ -36,7 +36,7 @@ async function ProductPage(props) {
         <div className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 1]</div>
         <div className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
       </div>
-      <span className="font-medium text-lg">Prijs: €3,00</span>
+      <span className="font-medium text-lg">Prijs: €-,--</span>
       <p>{product.description}</p>
     </div>
   )
