@@ -1,13 +1,24 @@
 import AddCard from "@/app/_components/Bestellen/AddCard"
+import AddCardLoadingSkeleton from "@/app/_components/Bestellen/AddCardLoadingSkeleton"
+import { Suspense } from "react"
 
-export default async function Page() {
-  const request = await fetch(`${process.env.API_ENDPOINT}/get-products`, {
+async function getData() {
+  const response = await fetch(`${process.env.API_ENDPOINT}/get-products`, {
     method: "POST",
     cache: "no-store"
   })
-  const data = await request.json()
+ 
+  if (!response.ok) {
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return response.json()
+}
+
+async function AddCardList() {
+  const data = await getData()
   const products = data.products
-  
+
   return (
     <div className="flex flex-col">
       {
@@ -21,5 +32,13 @@ export default async function Page() {
         })
       }
     </div>
+  )
+}
+
+export default async function Page() {
+  return (
+    <Suspense fallback={<AddCardLoadingSkeleton />}>
+      <AddCardList />
+    </Suspense>
   )
 }
