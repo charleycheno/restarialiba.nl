@@ -27,7 +27,10 @@ const productSchema = new mongoose.Schema({
       lowercase: true,
       trim: true,
    },
-   versions: []
+   versions: {
+      type: Array,
+      required: true
+   }
 })
 
 const Product = mongoose.models.Product || mongoose.model("Product", productSchema)
