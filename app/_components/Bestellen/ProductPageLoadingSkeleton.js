@@ -1,7 +1,6 @@
 export default function ProductPageLoadingSkeleton() {
   return (
     <div className="flex flex-col gap-4 p-4 animate-pulse">
-      <button className="bg-zinc-200 rounded-full h-10 font-medium"></button>
       <div className="flex gap-4 flex-wrap">
         <div className="bg-zinc-200 w-16 h-16 rounded-full"></div>
         <div className="flex flex-col justify-center gap-2">

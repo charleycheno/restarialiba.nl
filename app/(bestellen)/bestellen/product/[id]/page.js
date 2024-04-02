@@ -1,4 +1,5 @@
 import ProductPageLoadingSkeleton from "@/app/_components/Bestellen/ProductPageLoadingSkeleton"
+import VersionList from "@/app/_components/Bestellen/VersionForm"
 import { Suspense } from "react"
 
 async function getData(params) {
@@ -23,7 +24,6 @@ async function ProductPage(props) {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <button className="bg-green-600 rounded-full h-10 text-white font-medium">Toevoegen</button>
       <div className="flex gap-4 flex-wrap">
         <div className="bg-zinc-200 w-16 h-16 rounded-full"></div>
         <div className="flex flex-col justify-center">
@@ -32,12 +32,12 @@ async function ProductPage(props) {
         </div>
       </div>
       <div className="flex flex-wrap gap-2">
-        <div className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</div>
-        <div className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 1]</div>
-        <div className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
+        <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</div>
+        <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 1]</div>
+        <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
       </div>
-      <span className="font-medium text-lg">Prijs: €-,--</span>
       <p>{product.description}</p>
+      <VersionList versions={product.versions} />
     </div>
   )
 }
