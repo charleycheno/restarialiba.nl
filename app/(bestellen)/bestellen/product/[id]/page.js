@@ -38,7 +38,7 @@ async function ProductPage(props) {
           <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
         </div>
         {product.description && <p>{product.description}</p>}
-        <VersionList versions={product.versions} />
+        <VersionList id={product.id} versions={product.versions} />
       </div>
     )
   } else {
