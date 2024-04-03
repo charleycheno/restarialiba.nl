@@ -1,5 +1,6 @@
 import ProductPageLoadingSkeleton from "@/app/_components/Bestellen/ProductPageLoadingSkeleton"
 import VersionList from "@/app/_components/Bestellen/VersionForm"
+import Link from "next/link"
 import { Suspense } from "react"
 
 async function getData(params) {
@@ -33,7 +34,7 @@ async function ProductPage(props) {
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
-          {product.category && <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</div>}
+          {product.category && <Link href={"/bestellen/" + product.category} className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</Link>}
           <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 1]</div>
           <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
         </div>
