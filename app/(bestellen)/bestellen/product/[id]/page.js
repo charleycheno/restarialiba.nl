@@ -35,8 +35,6 @@ async function ProductPage(props) {
         </div>
         <div className="flex flex-wrap gap-2">
           {product.category && <Link href={"/bestellen/" + product.category} className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</Link>}
-          <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 1]</div>
-          <div className="capitalize px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">[allergie info 2]</div>
         </div>
         {product.description && <p>{product.description}</p>}
         <VersionList id={product.id} versions={product.versions} />
