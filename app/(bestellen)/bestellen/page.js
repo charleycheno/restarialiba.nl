@@ -6,10 +6,10 @@ export default function Page() {
       <div>
         <h2 className="mb-2 text-xl font-medium">Populair 🔥</h2>
         <div className="grid grid-cols-2 gap-2">
-          <Link href="/bestellen/bier" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Heineken</Link>
-          <Link href="/bestellen/snacks" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Frikandel</Link>
-          <Link href="/bestellen/burgers" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Hamburger</Link>
-          <Link href="/bestellen/warme-dranken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Koffie</Link>
+          <Link href="/bestellen/product/heineken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Heineken</Link>
+          <Link href="/bestellen/product/frikandel" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Frikandel</Link>
+          <Link href="/bestellen/product/hamburger" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Hamburger</Link>
+          <Link href="/bestellen/product/koffie" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Koffie</Link>
         </div>
       </div>
       <div>
