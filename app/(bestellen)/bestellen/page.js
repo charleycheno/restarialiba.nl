@@ -1,49 +1,50 @@
+import TileCard from "@/app/_components/Bestellen/TileCard"
 import Link from "next/link"
 
 export default function Page() {
   return (
-    <div className="container flex flex-col gap-4 mx-auto p-4">
+    <div className="flex flex-col gap-4 mx-auto p-4">
       <div>
         <h2 className="mb-2 text-xl font-medium">Populair 🔥</h2>
         <div className="grid grid-cols-2 gap-2">
-          <Link href="/bestellen/product/heineken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Heineken</Link>
-          <Link href="/bestellen/product/frikandel" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Frikandel</Link>
-          <Link href="/bestellen/product/hamburger" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Hamburger</Link>
-          <Link href="/bestellen/product/koffie" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Koffie</Link>
+          <TileCard href="/bestellen/product/heineken">Heineken</TileCard>
+          <TileCard href="/bestellen/product/frikandel">Frikandel</TileCard>
+          <TileCard href="/bestellen/product/hamburger">Hamburger</TileCard>
+          <TileCard href="/bestellen/product/koffie">Koffie</TileCard>
         </div>
       </div>
       <div>
         <h2 className="mb-2 text-xl font-medium">Categorieën</h2>
         <div className="grid grid-cols-2 gap-2">
-          <Link href="/bestellen/patat" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Patat</Link>
-          <Link href="/bestellen/snacks" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Snacks</Link>
-          <Link href="/bestellen/koude-broodjes" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Koude broodjes</Link>
-          <Link href="/bestellen/tostis" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Tosti's</Link>
-          <Link href="/bestellen/luxe-pistolet" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Luxe pistolet</Link>
-          <Link href="/bestellen/sandwiches" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Sandwiches</Link>
-          <Link href="/bestellen/12-uurtje" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">12-uurtje</Link>
-          <Link href="/bestellen/lunch-specialiteit" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Lunch specialiteit</Link>
-          <Link href="/bestellen/soepen" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Soepen</Link>
-          <Link href="/bestellen/uitsmijters" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Uitsmijters</Link>
-          <Link href="/bestellen/burgers" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Burgers</Link>
-          <Link href="/bestellen/kleine-gerechten" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Kleine gerechten</Link>
-          <Link href="/bestellen/salades" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Salades</Link>
-          <Link href="/bestellen/voor-bij-de-borrel" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Voor bij de borrel</Link>
-          <Link href="/bestellen/hoofd-gerechten" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Hoofdgerechten</Link>
-          <Link href="/bestellen/milkshake" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Milkshake</Link>
-          <Link href="/bestellen/ijskoffie" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">IJskoffie</Link>
-          <Link href="/bestellen/frisdranken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Frisdranken</Link>
-          <Link href="/bestellen/bier" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Bier</Link>
-          <Link href="/bestellen/wijn" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Wijn</Link>
-          <Link href="/bestellen/mix-en-sterke-dranken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Mix en sterke dranken</Link>
-          <Link href="/bestellen/warme-dranken" className="flex items-center justify-center text-center text-xl font-medium h-28 bg-zinc-200 rounded-xl">Warme dranken</Link>
+          <TileCard href="/bestellen/patat">Patat</TileCard>
+          <TileCard href="/bestellen/snacks">Snacks</TileCard>
+          <TileCard href="/bestellen/koude-broodjes">Koude broodjes</TileCard>
+          <TileCard href="/bestellen/tostis">Tosti's</TileCard>
+          <TileCard href="/bestellen/luxe-pistolet">Luxe pistolet</TileCard>
+          <TileCard href="/bestellen/sandwiches">Sandwiches</TileCard>
+          <TileCard href="/bestellen/12-uurtje">12-uurtje</TileCard>
+          <TileCard href="/bestellen/lunch-specialiteit">Lunch specialiteit</TileCard>
+          <TileCard href="/bestellen/soepen">Soepen</TileCard>
+          <TileCard href="/bestellen/uitsmijters">Uitsmijters</TileCard>
+          <TileCard href="/bestellen/burgers">Burgers</TileCard>
+          <TileCard href="/bestellen/kleine-gerechten">Kleine gerechten</TileCard>
+          <TileCard href="/bestellen/salades">Salades</TileCard>
+          <TileCard href="/bestellen/voor-bij-de-borrel">Voor bij de borrel</TileCard>
+          <TileCard href="/bestellen/hoofd-gerechten">Hoofdgerechten</TileCard>
+          <TileCard href="/bestellen/milkshake">Milkshake</TileCard>
+          <TileCard href="/bestellen/ijskoffie">IJskoffie</TileCard>
+          <TileCard href="/bestellen/frisdranken">Frisdranken</TileCard>
+          <TileCard href="/bestellen/bier">Bier</TileCard>
+          <TileCard href="/bestellen/wijn">Wijn</TileCard>
+          <TileCard href="/bestellen/mix-en-sterke-dranken">Mix en sterke dranken</TileCard>
+          <TileCard href="/bestellen/warme-dranken">Warme dranken</TileCard>
         </div>
       </div>
       <div>
         <h2 className="mb-2 text-xl font-medium">Diversen</h2>
         <div className="grid grid-cols-2 gap-2">
-          <Link href="/bestellen/overig" className="flex items-center justify-center text-xl font-medium h-24 bg-zinc-200 rounded-xl">Overig</Link>
-          <Link href="/bestellen/cadeaukaarten" className="flex items-center justify-center text-xl font-medium h-24 bg-zinc-200 rounded-xl">Cadeaukaarten</Link>
+          <TileCard href="/bestellen/overig" className="flex items-center justify-center text-xl font-medium h-24 bg-zinc-200 rounded-xl">Overig</TileCard>
+          <TileCard href="/bestellen/cadeaukaarten" className="flex items-center justify-center text-xl font-medium h-24 bg-zinc-200 rounded-xl">Cadeaukaarten</TileCard>
           <Link href="/bestellen/producten" className="flex items-center justify-center text-xl font-medium h-32 bg-zinc-200 rounded-xl col-span-2">Alle producten</Link>
         </div>
       </div>
