@@ -27,12 +27,7 @@ async function AddCardList(props) {
     <div className="flex flex-col">
       {
         products.map((product) => {
-          var prices = []
-          for (let i = 0; i < product.versions.length; i++) {
-            const version = product.versions[i];
-            prices.push(version.price)
-          }
-          return <AddCard key={product.id} name={product.name} id={product.id} prices={prices} />
+          return <AddCard key={product.id} product={product} />
         })
       }
     </div>
