@@ -30,13 +30,19 @@ async function ProductPage(props) {
           <div className="bg-zinc-200 w-16 h-16 rounded-full"></div>
           <div className="flex flex-col justify-center">
             <h1 className="text-lg font-medium">{product.name}</h1>
-            <span className="text-sm font-medium text-zinc-600">{product.id}</span>
+            <h2 className="text-sm font-medium text-zinc-600">{product.id}</h2>
           </div>
         </div>
         <div className="flex flex-wrap gap-2">
           {product.category && <Link href={"/bestellen/" + product.category} className="px-3 py-1 text-sm text-zinc-600 border rounded-full active:bg-zinc-200">{product.category}</Link>}
         </div>
-        {product.description && <p>{product.description}</p>}
+        {
+          product.description &&
+          <div>
+            <h3 className="font-medium">Beschrijving</h3>
+            <p>{product.description}</p>
+          </div>
+        }
         <VersionList id={product.id} versions={product.versions} />
       </div>
     )
