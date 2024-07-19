@@ -1,5 +1,7 @@
 import Header from "@/app/_components/Bestellen/Header"
 import NavBar from "@/app/_components/Bestellen/NavBar"
+import { createClient } from "../_utils/supabase/server"
+import { redirect } from "next/navigation"
 
 export const metadata = {
   title: {
@@ -9,7 +11,18 @@ export const metadata = {
   description: "Bestel online eten bij Restaria Liba!",
 }
 
-export default function Layout({ children }) {
+export default async function Layout({ children }) {
+  const supabase = createClient()
+
+  const { data, error } = await supabase.auth.getUser()
+
+  console.log(error, data)
+  console.log(error == true, !data?.user == true)
+
+  if(error || !data?.user) {
+    redirect("/inloggen")
+  }
+
   return (
     <div className="flex flex-col min-h-dvh w-full overflow-x-clip">
       <Header />
