@@ -64,7 +64,7 @@ export default function RegisterCard() {
             <Input type="email" label="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
             <Input type="password" label="Wachtwoord" value={password} onChange={(e) => setPassword(e.target.value)} />
             <Input type="password" label="Wachtwoord bevestigen" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-            <Button color="success" className="font-medium text-white" onClick={handleRegister} ref={loginButton} isLoading={loading}>Registreren</Button>
+            <Button color="success" className="font-medium text-white" onPress={handleRegister} ref={loginButton} isLoading={loading}>Registreren</Button>
             <p className="invisible text-red-500 text-center" ref={errorMessage}>Er is een fout opgetreden</p>
          </CardBody>
          <CardFooter className="flex flex-col gap-4 md:10px">

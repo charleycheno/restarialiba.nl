@@ -45,7 +45,7 @@ export default function EmailPromptCard({ setSent}) {
             </CardHeader>
             <CardBody className="flex flex-col gap-4 md:px-10">
                <Input type="email" label="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} />
-               <Button color="primary" className="font-medium" onClick={handlePasswordReset} ref={resetButton} isLoading={loading}>Wachtwoord resetten</Button>
+               <Button color="primary" className="font-medium" onPress={handlePasswordReset} ref={resetButton} isLoading={loading}>Wachtwoord resetten</Button>
                <p className="invisible text-red-500 text-center" ref={errorMessage}>Er is een fout opgetreden</p>
             </CardBody>
          </Card>
