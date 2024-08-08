@@ -16,10 +16,7 @@ export default async function Layout({ children }) {
 
   const { data, error } = await supabase.auth.getUser()
 
-  console.log(error, data)
-  console.log(error == true, !data?.user == true)
-
-  if(error || !data?.user) {
+  if(error || data?.user == null) {
     redirect("/inloggen")
   }
 

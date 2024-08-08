@@ -21,38 +21,34 @@ export default function RegisterCard() {
 
    async function handleRegister() {
       setLoading(true)
-      
-      const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
-      if(!pattern.test(password)) {
-         errorMessage.current.style.visibility = "visible"
-         errorMessage.current.textContent = "Het wachtwoord moet minimaal 8 karakters lang zijn en een hoofdletter, een kleine letter en een cijfer bevatten."
-         setLoading(false)
-      }
-      
-      if(password !== confirmPassword) {
-         errorMessage.current.style.visibility = "visible"
-         errorMessage.current.textContent = "De wachtwoorden komen niet overeen"
-         setLoading(false)
-      }
-      
       if(email == "" || password == "" || confirmPassword == "") {
          errorMessage.current.style.visibility = "visible"
          errorMessage.current.textContent = "Vul alle velden in"
          setLoading(false)
-      }
-
-      if(loading == false) {
+      } else if(password != confirmPassword) {
+         errorMessage.current.style.visibility = "visible"
+         errorMessage.current.textContent = "De wachtwoorden komen niet overeen"
+         setLoading(false)
+      } else if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)) {
+         errorMessage.current.style.visibility = "visible"
+         errorMessage.current.textContent = "Het wachtwoord moet minimaal 8 karakters lang zijn en minimaal een hoofdletter, een kleine letter, een cijfer en een speciaal karakter bevatten."
+         setLoading(false)
+      } else {
          const { data, error } = await supabase.auth.signUp({
             email: email,
             password: password
          })
 
-         if (error) {
+         if(error?.status == 422) {
+            errorMessage.current.style.visibility = "visible"
+            errorMessage.current.textContent = "Het e-mailadres is al in gebruik"
+            setLoading(false)
+         } else if(error) {
             errorMessage.current.style.visibility = "visible"
             errorMessage.current.textContent = "Er is een fout opgetreden"
             setLoading(false)
-         } else {
+         } else if(data) {
             router.push("/bestellen")
          }
       }
