@@ -44,7 +44,7 @@ export default function LoginCard() {
       await supabase.auth.signInWithOAuth({
          provider: "google",
          options: {
-            redirectTo: "http://www.ljhc.nl/callback"
+            redirectTo: "https://www.ljhc.nl/callback"
          }
       })
    }
