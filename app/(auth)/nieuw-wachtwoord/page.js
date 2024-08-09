@@ -1,28 +1,12 @@
-"use client"
-
+import ResetPasswordEmailCard from '@/app/_components/Bestellen/ResetPasswordEmailCard'
 import ResetPasswordCard from '@/app/_components/Bestellen/ResetPasswordCard'
-import EmailPromptCard from '@/app/_components/Bestellen/PasswordResetEmailPromptCard'
-import EmailSentCard from '@/app/_components/Bestellen/EmailSentCard'
-import { createClient } from '@/app/_utils/supabase/client'
-import { useState } from 'react'
+import { createClient } from '@/app/_utils/supabase/server'
 
-export default function Page() {
+export default async function Page() {
    const supabase = createClient()
 
-   const [sent, setSent] = useState(false)
-
-   const { data, error } = supabase.auth.getUser()
-
-   supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event == "PASSWORD_RECOVERY") {
-         const newPassword = prompt("What would you like your new password to be?");
-         const { data, error } = await supabase.auth
-            .updateUser({ password: newPassword })
-
-         if (data) alert("Password updated successfully!")
-         if (error) alert("There was an error updating your password.")
-      }
-   })
+   const { data, error } = await supabase.auth.getUser()
+   console.log(data, error)
 
    if(data?.user) {
       return (
@@ -33,7 +17,7 @@ export default function Page() {
    } else if(!data?.user) {
       return (
          <div className="flex justify-center p-4 md:py-10">
-            {sent ? <EmailSentCard /> : <EmailPromptCard setSent={setSent} />}
+            <ResetPasswordEmailCard />
          </div>
       )
    }
