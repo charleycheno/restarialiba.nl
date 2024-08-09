@@ -22,7 +22,7 @@ export default function EmailPromptCard({ setSent}) {
          setLoading(false)
       } else {
          const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: 'http://localhost:3000/nieuw-wachtwoord'
+            redirectTo: 'https://www.ljhc.nl/nieuw-wachtwoord'
          })
 
          if (error) {
