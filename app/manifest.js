@@ -3,7 +3,6 @@ export default function manifest() {
       name: 'Restaria Liba',
       short_name: 'Liba',
       description: 'Het plekje van Boven-Hardinxveld!',
-      start_url: '/bestellen',
       display: 'standalone',
       background_color: '#fff',
       theme_color: '#fff',

@@ -30,10 +30,5 @@ export default function sitemap() {
          lastModified: new Date(),
          priority: 0.8,
       },
-      {
-         url: 'https://ljhc.nl/bestellen',
-         lastModified: new Date(),
-         priority: 0.9,
-      },
    ]
 }

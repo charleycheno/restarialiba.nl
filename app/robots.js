@@ -3,7 +3,6 @@ export default function robots() {
       rules: {
          userAgent: '*',
          allow: '/',
-         allow: '/bestellen/',
          disallow: '/winkelwagen/',
          disallow: '/account/',
          disallow: '/admin/',
