@@ -82,7 +82,7 @@ export default function LoginCard() {
             <p className="invisible text-red-500 text-center" ref={errorMessage}>Er is een fout opgetreden</p>
          </CardBody>
          <CardFooter className="flex flex-col gap-4 md:10px">
-            <Link className="text-blue-700 hover:underline" href="/nieuw-wachtwoord">Wachtwoord vergeten?</Link>
+            <Link className="text-blue-700 hover:underline" href="/wachtwoord-vergeten">Wachtwoord vergeten?</Link>
             <p className="text-center">Nog geen account? <Link className="text-blue-700 hover:underline" href="/registreren">Registreren</Link></p>
          </CardFooter>
       </Card>

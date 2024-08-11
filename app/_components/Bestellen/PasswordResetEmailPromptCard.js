@@ -22,8 +22,9 @@ export default function EmailPromptCard({ setSent}) {
          setLoading(false)
       } else {
          const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: 'https://www.ljhc.nl/nieuw-wachtwoord'
-         })
+               redirectTo: "https://ljhc.nl/wachtwoord-resetten"
+            }
+         )
 
          if (error) {
             errorMessage.current.style.visibility = "visible"
